@@ -1,0 +1,19 @@
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    /* background: #000; */
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+  font-size: 22px;
+  font-weight: bolder;
+  background-image: url("../image/box-image.png");
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  cursor: pointer;
+}

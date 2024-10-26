@@ -11,8 +11,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
 }
-section {
+.header section {
   width: 300px;
   padding: 10px;
   display: flex;
@@ -27,5 +29,29 @@ section {
   -webkit-background-clip: text;
   background-clip: text;
   cursor: pointer;
- 
- }
+}
+
+/* hide header  -----------------------*/
+.hide-header {
+  position: fixed;
+  right: 10px;
+  /* background-color: black; */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hide-header div {
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.209);
+  backdrop-filter: blur(50px);
+}
+.hide-header div i {
+  font-size: 20px;
+  font-weight: bolder;
+  background-image: url("../image/box-image.png");
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  cursor: pointer;
+  padding: 5px;
+}

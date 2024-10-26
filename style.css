@@ -1,5 +1,6 @@
-
-*, *::after,*::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0;
   font-family: Arial, sans-serif;
   background-image: url("./assests/image/wood.jpg"),
@@ -18,7 +19,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  min-height: 400px;
+  min-height: 450px;
+  width: 100vw;
   user-select: none;
   /* background-color: #181717; */
   transition: all 0.3s;
@@ -95,14 +97,20 @@ h2 {
 /* win-active-cell---------------------- */
 .win-active-cell {
   border-color: red;
-     animation: borderColorChange 3s infinite;
+  animation: borderColorChange 3s infinite;
 }
 
-
-
-   @keyframes borderColorChange {
-      0%   { border-color: rgb(255, 0, 0); }   /* Red */
-      33%  { border-color: rgb(0, 255, 0); }   /* Green */
-      66%  { border-color: rgb(0, 0, 255); }   /* Blue */
-      100% { border-color: rgb(255, 0, 0); }   /* Back to Red */
-    }
+@keyframes borderColorChange {
+  0% {
+    border-color: rgb(255, 0, 0);
+  } /* Red */
+  33% {
+    border-color: rgb(0, 255, 0);
+  } /* Green */
+  66% {
+    border-color: rgb(0, 0, 255);
+  } /* Blue */
+  100% {
+    border-color: rgb(255, 0, 0);
+  } /* Back to Red */
+}
