@@ -1,0 +1,15 @@
+.bubble {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: rgba(173, 216, 230, 0.7); /* Light blue */
+      animation: floatUp linear;
+      pointer-events: none;
+    }
+
+    /* Keyframes for floating up */
+    @keyframes floatUp {
+      from { transform: translateY(0); }
+      to { transform: translateY(-100vh); }
+    }

@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe - Two Player</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assests/css/bubble.css" />
+    <link rel="stylesheet" href="./assests/css/header.css" />
+    <link rel="stylesheet" href="./assests/css/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <h2>Player</h2>
+    <!-- nav bar -->
+    <nav class="header">
+      <section>
+        <div class="button" id="setting">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="button" id="reload">
+          <i class="fa-solid fa-circle-pause"></i>
+        </div>
+        <div class="button" id="reload">
+          <i class="fa-solid fa-rotate-right"></i>
+        </div>
+      </section>
+    </nav>
+    <!-- game bord container  -->
     <div class="game-board">
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
@@ -19,6 +44,14 @@
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
     </div>
+
+    <footer></footer>
+
+    <!-- hide header -->
+    <section>
+      <div><i class="fa-solid fa-eye-slash"></i></div>
+    </section>
     <script src="script.js"></script>
+    <!-- <script src="./assests/js/bubble.js"></script> -->
   </body>
 </html>

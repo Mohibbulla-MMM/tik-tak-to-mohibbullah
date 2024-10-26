@@ -1,8 +1,14 @@
+
+*, *::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: space-between;
   margin: 0;
   font-family: Arial, sans-serif;
   background-image: url("./assests/image/wood.jpg"),
@@ -11,10 +17,12 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 400px;
   user-select: none;
   /* background-color: #181717; */
   transition: all 0.3s;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -24,14 +32,14 @@ h2 {
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  gap: 20px;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 25px;
 }
 
 .cell {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   /* background-color: #ffffff; */
   /* border: 1px solid #ffffff; */
   display: flex;

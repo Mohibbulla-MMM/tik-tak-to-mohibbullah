@@ -46,18 +46,19 @@ function handleCellClick(e) {
   }
 
   // current player chaking ---------------
-  currentPlayer = currentPlayer === "X" ? "O" : "X";
+  // currentPlayer = currentPlayer === "X" ? "O" : "X";
 
   //  check win and reset game ----------------
   if (playerXCells?.length >= 3 || playerOCells?.length >= 3) {
     if (handleCheckWin()) {
       handleWinActiveCell();
       // console.log(handleCheckWin());
-      alert(`${currentPlayer} wins!`);
-      // console.log(`${currentPlayer} wins!`);
-      // handleResetGame();
+      // alert(`${currentPlayer} wins!`);
+      console.log(`${currentPlayer} wins!`);
+      handleResetGame();
     }
   }
+  currentPlayer = currentPlayer === "X" ? "O" : "X";
 }
 
 // handleResetCell ------------------------------
@@ -90,11 +91,13 @@ function handleCheckWin() {
     [0, 4, 8],
     [2, 4, 6],
   ];
-
   return winCombinations.some((combination) => {
     // console.log(combination)
     return combination.every((i) => {
       const result = cells[i].textContent === currentPlayer;
+      if (result) {
+        console.log("check win");
+      }
       return result;
     });
   });
