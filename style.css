@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   user-select: none;
   /* background-color: #181717; */
+  transition: all 0.3s;
 }
 
 h2 {
@@ -82,3 +83,18 @@ h2 {
 /* *{
   color: rgb(0, 255, 0) !important;
 } */
+
+/* win-active-cell---------------------- */
+.win-active-cell {
+  border-color: red;
+     animation: borderColorChange 3s infinite;
+}
+
+
+
+   @keyframes borderColorChange {
+      0%   { border-color: rgb(255, 0, 0); }   /* Red */
+      33%  { border-color: rgb(0, 255, 0); }   /* Green */
+      66%  { border-color: rgb(0, 0, 255); }   /* Blue */
+      100% { border-color: rgb(255, 0, 0); }   /* Back to Red */
+    }

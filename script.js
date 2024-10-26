@@ -51,10 +51,11 @@ function handleCellClick(e) {
   //  check win and reset game ----------------
   if (playerXCells?.length >= 3 || playerOCells?.length >= 3) {
     if (handleCheckWin()) {
+      handleWinActiveCell();
       // console.log(handleCheckWin());
       alert(`${currentPlayer} wins!`);
       // console.log(`${currentPlayer} wins!`);
-      handleResetGame();
+      // handleResetGame();
     }
   }
 }
@@ -62,11 +63,7 @@ function handleCellClick(e) {
 // handleResetCell ------------------------------
 function handleResetCell(cell) {
   cell.textContent = "";
-  // cell.removeAttribute('class');
-  // cell.classList.remove("yellow-0");
   cell.classList = "cell";
-  // console.log(cell);
-  // console.dir(cell);
   handleTextStyle();
 }
 
@@ -74,13 +71,14 @@ function handleResetCell(cell) {
 function handleResetGame() {
   cells.forEach((cell) => {
     cell.textContent = "";
+    cell.classList = "cell";
   });
   playerXCells = [];
   playerOCells = [];
   currentPlayer = "X";
 }
 
-// handleCheckWin ------------------------------
+// handleCheckWin -------------------------
 function handleCheckWin() {
   const winCombinations = [
     [0, 1, 2],
@@ -96,9 +94,8 @@ function handleCheckWin() {
   return winCombinations.some((combination) => {
     // console.log(combination)
     return combination.every((i) => {
-      //   console.log(i);
-      //   console.log(cells[i].textContent === currentPlayer);
-      return cells[i].textContent === currentPlayer;
+      const result = cells[i].textContent === currentPlayer;
+      return result;
     });
   });
 }
@@ -114,6 +111,20 @@ function handleTextStyle() {
   });
   playerOCells?.forEach((cell, i) => {
     cell.classList.add(`green-${i}`);
+  });
+}
+
+// active cell --------------------
+function handleWinActiveCell() {
+  const element = Array.from(cells);
+  // const text = currentPlayer === "X" ? "O" : "X";
+  const arr = element.filter((value) => {
+    const result = value.textContent === currentPlayer;
+    return result;
+  });
+  // win cell active class added ----------------
+  arr?.forEach((cell) => {
+    cell.classList.add("win-active-cell");
   });
 }
 
