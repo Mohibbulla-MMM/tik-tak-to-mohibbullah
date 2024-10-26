@@ -20,18 +20,20 @@
   </head>
   <body>
     <!-- nav bar -->
-    <nav class="header">
-      <section>
-        <div class="button text-wood-style" id="setting">
-          <i class="fa-solid fa-gear"></i>
-        </div>
-        <div class="button text-wood-style" id="reload">
-          <i class="fa-solid fa-circle-pause"></i>
-        </div>
-        <div class="button text-wood-style" id="reload">
-          <i class="fa-solid fa-rotate-right"></i>
-        </div>
-      </section>
+    <nav class="header" id="header">
+      <div class="header-box">
+        <section>
+          <div class="button text-wood-style" id="setting">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div class="button text-wood-style" id="reload">
+            <i class="fa-solid fa-circle-pause"></i>
+          </div>
+          <div class="button text-wood-style" id="reload">
+            <i class="fa-solid fa-rotate-right"></i>
+          </div>
+        </section>
+      </div>
     </nav>
 
     <!-- game bord container  -->
@@ -48,12 +50,15 @@
     </div>
 
     <!-- hide header -->
-    <section class="hide-header button" id="hide-header">
-      <div class="text-wood-style"><i class="fa-solid fa-eye"></i></div>
+    <section class="hide-header button" id="hideHeaderSection">
+      <div class="text-wood-style">
+        <!-- <i class="fa-solid fa-eye-slash"></i> -->
+        <i id="hideHeader" class="fa-solid fa-eye"></i>
+      </div>
     </section>
 
     <!-- footer -->
-    <footer>
+    <footer id="footer">
       <p class="text-wood-style">M4-Developer</p>
     </footer>
 
@@ -71,6 +76,7 @@
 
     <script src="script.js"></script>
     <script src="./assests/js/winPopUp.js"></script>
+    <script src="./assests/js/header.js"></script>
     <!-- <script src="./assests/js/bubble.js"></script> -->
   </body>
 </html>
