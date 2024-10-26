@@ -1,4 +1,5 @@
 const clickSound = new Audio("./wood.MP3");
+const clickSound2 = new Audio("./click.MP3");
 const cells = document.querySelectorAll("[data-cell]");
 let currentPlayer = "X";
 let playerXCells = [];
@@ -127,4 +128,16 @@ cells.forEach((cell) => {
   // handleTextStyle()
   // console.log(cell)
   cell.addEventListener("click", handleCellClick);
+});
+
+// =============================================
+// ======all button sound effect add =========
+// =============================================
+
+const button = document.querySelectorAll(".button");
+console.log(button)
+button.forEach((element) => {
+  element.addEventListener("click", () => {
+    clickSound2.play();
+  });
 });
