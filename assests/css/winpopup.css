@@ -1,0 +1,41 @@
+.winpopup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.425);
+  z-index: 100;
+  display: none;
+  transition: all 1s;
+}
+
+.winpopup section {
+  width: 100%;
+  height: 100%;
+  /* background-color: red ; */
+  background-image: url("../image/win.gif");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.winpopup .win-box {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.202);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.winpopup .win-box p {
+  width: auto;
+}
+.winpopup .win-box h1 {
+  font-size: 18px;
+  font-weight: bold;
+}

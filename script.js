@@ -1,24 +1,18 @@
 const clickSound = new Audio("./wood.MP3");
 const cells = document.querySelectorAll("[data-cell]");
-// console.log(cells);
 let currentPlayer = "X";
 let playerXCells = [];
 let playerOCells = [];
 
 // handleCellClick ------------------------------
 function handleCellClick(e) {
-  // handleTextStyle();
-  // console.log(2);
-
-  // console.log({playerOCells,playerXCells})
   const cell = e.target;
-  //   console.log(cell.textContent )
+
   if (cell.textContent !== "") return;
 
   // click sound effect -----------
   clickSound.play();
 
-  //   console.log('message')
   //   currnet cell inset content ------------
   cell.textContent = currentPlayer;
 
@@ -30,8 +24,6 @@ function handleCellClick(e) {
     // console.log(playerXCells);
     if (playerXCells?.length > 3) {
       handleResetCell(playerXCells.shift());
-      //   console.log(playerXCells.shift());
-      //   console.log(playerXCells.length);
     }
   } else {
     if (currentPlayer === "O") {
@@ -45,19 +37,18 @@ function handleCellClick(e) {
     }
   }
 
-  // current player chaking ---------------
   // currentPlayer = currentPlayer === "X" ? "O" : "X";
 
   //  check win and reset game ----------------
   if (playerXCells?.length >= 3 || playerOCells?.length >= 3) {
     if (handleCheckWin()) {
       handleWinActiveCell();
-      // console.log(handleCheckWin());
-      // alert(`${currentPlayer} wins!`);
-      console.log(`${currentPlayer} wins!`);
-      handleResetGame();
+      winPopUp();
+      // console.log(`${currentPlayer} wins!`);
+      // handleResetGame();
     }
   }
+  // current player chaking ---------------
   currentPlayer = currentPlayer === "X" ? "O" : "X";
 }
 

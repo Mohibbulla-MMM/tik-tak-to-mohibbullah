@@ -114,3 +114,25 @@ h2 {
     border-color: rgb(255, 0, 0);
   } /* Back to Red */
 }
+
+/* utils css class ------------- */
+.btn {
+  padding: 10px 20px;
+  /* background-color: rgb(109, 62, 0); */
+  background-image: url("./assests/image/box-image.png");
+  border-radius: 100px;
+  border: 1px solid rgb(164, 86, 2);
+  box-shadow: inset 5px 5px 5px 0 rgb(78, 40, 0), 2px 2px 0px 0 rgb(128, 66, 0),
+    inset -2px -2px 2px 0 rgba(151, 78, 0, 0.508);
+}
+
+
+.text-wood-style {
+    font-size: 22px;
+  font-weight: bolder;
+  background-image: url("./assests/image/lands-wood.png");
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

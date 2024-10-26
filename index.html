@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assests/css/bubble.css" />
     <link rel="stylesheet" href="./assests/css/header.css" />
     <link rel="stylesheet" href="./assests/css/footer.css" />
+    <link rel="stylesheet" href="./assests/css/winpopup.css" />
 
     <link
       rel="stylesheet"
@@ -21,13 +22,13 @@
     <!-- nav bar -->
     <nav class="header">
       <section>
-        <div class="button" id="setting">
+        <div class="button text-wood-style" id="setting">
           <i class="fa-solid fa-gear"></i>
         </div>
-        <div class="button" id="reload">
+        <div class="button text-wood-style" id="reload">
           <i class="fa-solid fa-circle-pause"></i>
         </div>
-        <div class="button" id="reload">
+        <div class="button text-wood-style" id="reload">
           <i class="fa-solid fa-rotate-right"></i>
         </div>
       </section>
@@ -47,15 +48,29 @@
     </div>
 
     <!-- hide header -->
-    <section class="hide-header" id="hide-header">
-      <div><i class="fa-solid fa-eye"></i></div>
+    <section class="hide-header button" id="hide-header">
+      <div class="text-wood-style"><i class="fa-solid fa-eye"></i></div>
     </section>
 
     <!-- footer -->
     <footer>
-      <p>M4-Developer</p>
+      <p class="text-wood-style">M4-Developer</p>
     </footer>
+
+    <!-- win popup  -->
+    <div class="winpopup" id="winpopup">
+      <section>
+        <div class="win-box">
+          <h1 class="text-wood-style">
+            🎉 Congratulations, <span id="winTitle"></span> Wins! 🎉
+          </h1>
+          <p class="btn" id="winOkBtn">OK</p>
+        </div>
+      </section>
+    </div>
+
     <script src="script.js"></script>
+    <script src="./assests/js/winPopUp.js"></script>
     <!-- <script src="./assests/js/bubble.js"></script> -->
   </body>
 </html>

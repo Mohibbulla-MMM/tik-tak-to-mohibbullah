@@ -22,36 +22,20 @@
   align-items: center;
 }
 .header .button i {
-  font-weight: bolder;
-  background-image: url("../image/box-image.png");
-  background-size: cover;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  font-size: 30px;
   cursor: pointer;
 }
 
 /* hide header  -----------------------*/
 .hide-header {
   position: fixed;
-  right: 10px;
+  left: 50%;
   /* background-color: black; */
-  top: 50%;
-  transform: translateY(-50%);
+  top: 100%;
+  transform: translate(-50%, -60px);
 }
 .hide-header div {
   border-radius: 100px;
   background-color: rgba(0, 0, 0, 0.209);
   backdrop-filter: blur(50px);
-}
-.hide-header div i {
-  font-size: 20px;
-  font-weight: bolder;
-  background-image: url("../image/box-image.png");
-  background-size: cover;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  cursor: pointer;
-  padding: 5px;
 }
