@@ -20,11 +20,12 @@
 }
 
 .winpopup .win-box {
-  padding: 20px;
+  padding: 15px;
   background-color: rgba(0, 0, 0, 0.202);
   backdrop-filter: blur(4px);
   border-radius: 20px;
   color: white;
+  border: 1px solid white;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -24,7 +24,7 @@ body {
   user-select: none;
   /* background-color: #181717; */
   transition: all 0.3s;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h2 {
