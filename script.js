@@ -1,6 +1,9 @@
 const clickSound = new Audio("./wood.MP3");
 const clickSound2 = new Audio("./click.MP3");
+const clickSound3 = new Audio("./opss.MP3");
 const cells = document.querySelectorAll("[data-cell]");
+const pausePopup = document.getElementById("pausePopup");
+
 let currentPlayer = "X";
 let playerXCells = [];
 let playerOCells = [];
@@ -142,3 +145,19 @@ button.forEach((element) => {
     if (touchSound) clickSound2.play();
   });
 });
+// pause pupup click sound effect -----------
+pausePopup.addEventListener("click", (e) => {
+  clickSound3.play();
+  const x = e.offsetX - 50;
+  const y = e.offsetY - 50;
+  pauseBubble.style.top = `${y}px`;
+  pauseBubble.style.left = `${x}px`;
+  endAnimation();
+});
+function endAnimation() {
+  pauseBubble.classList.add("opps-animation");
+  setTimeout(() => {
+    console.log("closed animation");
+    pauseBubble.classList.remove("opps-animation");
+  }, 400);
+}

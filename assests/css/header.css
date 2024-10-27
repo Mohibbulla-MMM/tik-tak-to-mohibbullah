@@ -68,3 +68,37 @@
   cursor: no-drop;
   backdrop-filter: blur(4px);
 }
+
+.pausePopup .pauseBubble {
+  content: "";
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 100%;
+  background-image: radial-gradient(
+    60% 55%,
+    rgb(255, 0, 0),
+    rgba(255, 255, 0, 0.897),
+    rgba(0, 0, 0, 0.754)
+  );
+  visibility: hidden;
+  scale: 2;
+}
+.opps-animation {
+  animation: opps 0.3s;
+}
+@keyframes opps {
+  from {
+    scale: 2;
+    visibility: visible;
+    /* display: block; */
+  }
+  to {
+    scale: 0.01;
+    visibility: hidden;
+    /* display: none; */
+  }
+}

@@ -4,8 +4,9 @@ const header = document.getElementById("header");
 const footer = document.getElementById("footer");
 const headerMusic = document.getElementById("headerMusic");
 const headerPause = document.getElementById("headerPause");
-const pausePopup = document.getElementById("pausePopup");
 const reloadGame = document.getElementById("reloadGame");
+const pauseBubble = document.getElementById("pauseBubble");
+
 let headerCheck = true;
 
 hideHeader.addEventListener("click", () => {
