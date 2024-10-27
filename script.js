@@ -26,8 +26,7 @@ function handleCellClick(e) {
     playerXCells.push(cell);
     handleTextStyle();
 
-    // console.log(playerXCells);
-    if (playerXCells?.length > 3) {
+     if (playerXCells?.length > 3) {
       handleResetCell(playerXCells.shift());
     }
   } else {
@@ -35,8 +34,7 @@ function handleCellClick(e) {
       playerOCells.push(cell);
       handleTextStyle();
 
-      // console.log(playerOCells);
-      if (playerOCells.length > 3) {
+       if (playerOCells.length > 3) {
         handleResetCell(playerOCells.shift());
       }
     }
@@ -49,8 +47,7 @@ function handleCellClick(e) {
     if (handleCheckWin()) {
       handleWinActiveCell();
       winPopUp();
-      // console.log(`${currentPlayer} wins!`);
-      // handleResetGame();
+       // handleResetGame();
     }
   }
   // current player chaking ---------------
@@ -88,12 +85,9 @@ function handleCheckWin() {
     [2, 4, 6],
   ];
   return winCombinations.some((combination) => {
-    // console.log(combination)
-    return combination.every((i) => {
+     return combination.every((i) => {
       const result = cells[i].textContent === currentPlayer;
-      if (result) {
-        console.log("check win");
-      }
+      
       return result;
     });
   });
@@ -101,13 +95,10 @@ function handleCheckWin() {
 
 // text style ---------------------
 function handleTextStyle() {
-  // console.log({ xCell, yCell });
-  playerXCells?.forEach((cell, i) => {
-    // console.log({ i });
-    // cell.style.color = `yellow`;
+   playerXCells?.forEach((cell, i) => {
+     // cell.style.color = `yellow`;
     cell.classList.add(`yellow-${i}`);
-    // console.log(1);
-  });
+   });
   playerOCells?.forEach((cell, i) => {
     cell.classList.add(`green-${i}`);
   });
@@ -130,8 +121,7 @@ function handleWinActiveCell() {
 // all cell event listener add ---------------------
 cells.forEach((cell) => {
   // handleTextStyle()
-  // console.log(cell)
-  cell.addEventListener("click", handleCellClick);
+   cell.addEventListener("click", handleCellClick);
 });
 
 // =============================================
@@ -139,8 +129,7 @@ cells.forEach((cell) => {
 // =============================================
 
 const button = document.querySelectorAll(".button");
-// console.log(button);
-button.forEach((element) => {
+ button.forEach((element) => {
   element.addEventListener("click", () => {
     if (touchSound) clickSound2.play();
   });
@@ -157,7 +146,6 @@ pausePopup.addEventListener("click", (e) => {
 function endAnimation() {
   pauseBubble.classList.add("opps-animation");
   setTimeout(() => {
-    console.log("closed animation");
-    pauseBubble.classList.remove("opps-animation");
+     pauseBubble.classList.remove("opps-animation");
   }, 400);
 }

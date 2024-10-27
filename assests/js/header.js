@@ -27,8 +27,6 @@ hideHeader.addEventListener("click", () => {
   }
 });
 
-// console.log(hideHeader);
-
 // sound off -----------
 headerMusic.addEventListener("click", () => {
   if (touchSound) {
@@ -45,7 +43,6 @@ headerMusic.addEventListener("click", () => {
 // sound off -----------
 headerPause.addEventListener("click", (e) => {
   if (e.target.classList.contains("fa-circle-pause")) {
-    // console.log("header pause");
     headerPause.classList.remove("fa-circle-pause");
     headerPause.classList.add("fa-play");
     pausePopup.style.display = "block";
