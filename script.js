@@ -136,7 +136,7 @@ cells.forEach((cell) => {
 // =============================================
 
 const button = document.querySelectorAll(".button");
-console.log(button);
+// console.log(button);
 button.forEach((element) => {
   element.addEventListener("click", () => {
     if (touchSound) clickSound2.play();

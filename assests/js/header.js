@@ -3,6 +3,9 @@ const hideHeaderSection = document.getElementById("hideHeaderSection");
 const header = document.getElementById("header");
 const footer = document.getElementById("footer");
 const headerMusic = document.getElementById("headerMusic");
+const headerPause = document.getElementById("headerPause");
+const pausePopup = document.getElementById("pausePopup");
+const reloadGame = document.getElementById("reloadGame");
 let headerCheck = true;
 
 hideHeader.addEventListener("click", () => {
@@ -37,3 +40,20 @@ headerMusic.addEventListener("click", () => {
     touchSound = true;
   }
 });
+
+// sound off -----------
+headerPause.addEventListener("click", (e) => {
+  if (e.target.classList.contains("fa-circle-pause")) {
+    // console.log("header pause");
+    headerPause.classList.remove("fa-circle-pause");
+    headerPause.classList.add("fa-play");
+    pausePopup.style.display = "block";
+  } else {
+    headerPause.classList.remove("fa-play");
+    headerPause.classList.add("fa-circle-pause");
+    pausePopup.style.display = "none";
+  }
+});
+
+//   rest game ----------------
+reloadGame.addEventListener("click", handleResetGame);

@@ -2,7 +2,11 @@
   height: 50px;
   width: 100%;
   /* background-image: url("../image/lands-wood.png"); */
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.159), rgba(0, 0, 0, 0.518));
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.159),
+    rgba(0, 0, 0, 0.518)
+  );
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,4 +52,19 @@
   background-color: rgba(0, 0, 0, 0.209);
   backdrop-filter: blur(50px);
   cursor: pointer;
+}
+
+/* /* header pause popukjp  ---------------- */
+.pausePopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.425);
+  z-index: 20;
+  display: none;
+  transition: all 1s;
+  cursor: no-drop;
+  backdrop-filter: blur(4px);
 }
