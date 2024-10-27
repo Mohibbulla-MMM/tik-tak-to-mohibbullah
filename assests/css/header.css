@@ -12,6 +12,7 @@
   top: 0;
   left: 0;
   /* display: none; */
+  z-index: 100;
 }
 .header .header-box {
   width: 100%;

@@ -4,6 +4,7 @@ const cells = document.querySelectorAll("[data-cell]");
 let currentPlayer = "X";
 let playerXCells = [];
 let playerOCells = [];
+let touchSound = true;
 
 // handleCellClick ------------------------------
 function handleCellClick(e) {
@@ -12,7 +13,7 @@ function handleCellClick(e) {
   if (cell.textContent !== "") return;
 
   // click sound effect -----------
-  clickSound.play();
+  if (touchSound) clickSound.play();
 
   //   currnet cell inset content ------------
   cell.textContent = currentPlayer;
@@ -135,9 +136,9 @@ cells.forEach((cell) => {
 // =============================================
 
 const button = document.querySelectorAll(".button");
-console.log(button)
+console.log(button);
 button.forEach((element) => {
   element.addEventListener("click", () => {
-    clickSound2.play();
+    if (touchSound) clickSound2.play();
   });
 });
